@@ -1,0 +1,77 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid px-lg-5">
+      <img src="{% static 'images/HEAR__1_-removebg-preview.png' %}" class=" cursor-poiner " alt="Assist"  >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <ul class="navbar-nav ms-auto">
+        {% if request.user.is_authenticated %}
+        <li class="">
+          <div class="d-flex">
+            <div class="dropdown me-1">
+              <a class="dropdown-toggle dropdown--toggle--none text-decoration-none text-light show" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="true" data-bs-offset="10,20">
+                <img src="{% static 'images/utoc_dummyprofile.svg' %}" class=" cursor-poiner rounded-circle" alt="Assist" style="width: 35px ; height:35px;" >
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end pt-4 px-2 rounded-3 shadow-sm " style="min-width:250px;" aria-labelledby="dropdownMenuOffset" data-bs-popper="none">
+                <div class="d-flex align-items-center px-2">
+                  <div class="flex-grow-1 ms-3">
+                    <h5 class="small fw-bold text-primary m-0">Hello {{request.user}}</h5>
+                    <p class="d-inline-block m-0 text-truncate text-muted small" style="max-width: 150px;"> +91 9994770473 </p>
+                  </div>
+                </div>
+                <hr class="text-muted mb-1">
+                <div class="my-2">
+                  <li><a class="dropdown-item small text-muted px-2" href="#">My Profile</a></li>
+                  <li><a class="dropdown-item small text-muted px-2" href="#">My Account</a> </li>
+                </div>
+                <hr class="text-muted my-1">
+                <div class="my-2">
+                  <li><a class="dropdown-item small text-muted px-2" href="">Help &amp; Support</a></li>
+                  <li><a class="dropdown-item small text-muted px-2" href="">FAQ’s</a></li>
+                </div>
+                <hr class="text-muted my-1">
+                <div class="my-2">
+                  <li><a class="dropdown-item small text-muted px-2" href="{% url 'logout' %}">Logout</a></li>
+                </div>
+              </ul>
+            </div>
+        </div>
+      </li>
+      {% else %}   
+      <li class="nav-item ">
+        <a class="nav-link small fw-bold text-decoration-none" href="{% url 'login' %}">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link small fw-bold">|</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link small fw-bold text-decoration-none" href="{% url 'register' %}">Sign Up</a>
+      </li>
+      {% endif %}
+        
+
+      </ul>
+
+    </div>
+  </nav>
+  <div class="bg-white">
+
+    <div class="container px-0 margin-head">
+      <div class="row">
+        <div class="col-lg-12 my-auto pe-0  d-flex justify-content-around">
+          <div class="hstack gap-1">
+              <a href="{% url 'home' %}" class="text-decoration-none text-capitalize small text-primary fw-bold ms-2 me-2 py-3">Home</a>
+              <span class="text-muted">|</span>
+              <a href="{% url 'collections' %}" class=" text-capitalize small text-primary fw-bold ms-2 me-2 py-3">Collections</a>
+              <span class="text-muted"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

@@ -1,0 +1,9 @@
+# Pyre type checker
+.pyre/
+
+shop/migrations/*
+controler/migrations/*
+
+shop/__pycache__/*
+controler/__pycache__/*
+

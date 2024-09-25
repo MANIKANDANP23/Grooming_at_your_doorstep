@@ -1,0 +1,58 @@
+{% extends 'shop/layouts/main.html' %}
+{% load static %}
+{% block title %}
+idex | page
+{% endblock title %}
+
+{% block content %}
+<style>
+    .light-sky-blue {
+    background-color: #DEEFFF !important;
+}
+
+.fix--top {
+    top: -60px;
+}
+</style>
+{% include 'shop/inc/navbar.html' %}
+<div class="main m--lg--banner">
+    <div class="light-sky-blue p-0 py-5" style="overflow: hidden;">
+        <div class="container position-relative py-5">
+            <img src="{% static 'images/hz_rightbottomleaf.webp' %}" class="position-absolute top-0 end-0" alt="double-circle-top-right">
+            <div class="position-relative">
+                <h1 class="text-primary text-center fw-bold m-0">About Us</h1>
+                <!-- <h2 class="text-primary text-center fs-6">HEARZAP Version: 2.0 (PRD)</h2> -->
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class=" d-lg-none ">
+            <div class="bg-primary fixed-top">
+    <p class="m-0 text-center py-3 text-white">
+        <a href="/"><img src="" class="" alt=""></a>
+     </p>
+  <a onclick="history.back()">
+    <img src="" class="position-absolute top-0 start-0 m-3" alt=""></a>
+</div>
+        </div>
+        <div class="position-relative fix--top mx-2">
+            <div class="container rounded-3">
+                <div class="row">
+                    <div class="col-lg-10 col-sm-12 p-0 mx-auto">
+                        <div class="pb-5 mb-5">
+                            <div class="card shadow-sm p-0 rounded-3 border-0">
+                                <div class="card-body text-muted p-lg-5">
+    <h3>Our Services</h3><p>At HOMIES, we offer a wide range of home services to cater to your personal care needs:</p><ul><li><p><strong>Haircuts:</strong> Whether you're looking for a trendy new style, a classic cut, or a simple trim, our experienced hairstylists are ready to help you achieve the look you desire.</p></li><li><p><strong>Henna Artistry:</strong> Our skilled henna artists specialize in creating beautiful and intricate designs for all occasions, from weddings and festivals to personal adornment.</p></li><li><p><strong>Makeup Artistry:</strong> From natural, everyday looks to glamorous makeovers for special events, our professional makeup artists use high-quality products and techniques to enhance your natural beauty.</p></li></ul><h3>Our Team</h3><p>As a young and dynamic company, our team consists of certified and passionate professionals dedicated to providing you with the best possible service. Each member of the HOMIES team is carefully selected and trained to ensure they meet our high standards of quality, hygiene, and customer care. We take pride in our work and strive to make every appointment a relaxing and enjoyable experience for our clients.</p><h3>Why Choose HOMIES?</h3><ul><li><p><strong>Convenience:</strong> Book our services easily through our website or app, and our professionals will come to you at your preferred time and location.</p></li><li><p><strong>Quality:</strong> We use only the best products and tools to ensure that you receive top-quality service every time.</p></li><li><p><strong>Safety and Hygiene:</strong> Your safety is our priority. Our professionals follow strict hygiene protocols and safety measures to ensure a clean and safe experience.</p></li><li><p><strong>Personalized Care:</strong> We tailor our services to meet your individual needs and preferences, ensuring a personalized and satisfying experience.</p></li></ul><h3>Join Us on Our Journey</h3><p>As a startup, we are excited to grow and evolve with our community. We are committed to continually improving our services and expanding our offerings to better serve you. Thank you for choosing HOMIES. We look forward to being part of your beauty and grooming routine and making it a delightful and convenient experience.</p><hr>
+</div>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+   
+   
